@@ -1,0 +1,21 @@
+class Car:
+    # Class Variable (Shared by all cars)
+    wheels = 4 
+
+    def __init__(self, brand, color):
+        # Instance Variables (Unique to each car)
+        self.brand = brand  
+        self.color = color  
+
+# Creating two distinct object instances
+car1 = Car("Tesla", "Red")
+car2 = Car("BMW", "Blue")
+
+# 1. Accessing Instance Variables (Values are unique)
+print(car1.brand)  # Output: Tesla
+print(car2.brand)  # Output: BMW
+
+# 2. Accessing Class Variables (Value is shared)
+print(car1.wheels) # Output: 4
+print(car2.wheels) # Output: 4
+print(Car.wheels)  # Output: 4 (Best practice: access via Class name)
